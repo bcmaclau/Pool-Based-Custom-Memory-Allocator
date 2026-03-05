@@ -5,11 +5,11 @@ This project implements a custom fixed-size memory allocator in C using a pool-b
 Design:
 
 The allocator contains 9 memory pools of fixed power of 2 sizes.
-Pool 0 -> 16 byte chunks
-Pool 1 -> 32 byte chunks
-Pool 2 -> 64 byte chunks
+- Pool 0 -> 16 byte chunks
+- Pool 1 -> 32 byte chunks
+- Pool 2 -> 64 byte chunks
 ...
-Pool 9 -> 4096 byte chunks
+- Pool 9 -> 4096 byte chunks
 
 Each chunk of memory is structed as:
 [ Header | Free-list Pointer (when unused) | User Memory ]
